@@ -6,4 +6,5 @@
 *.log
 *.out
 *.backup
-
+*.bbl
+*.blg
