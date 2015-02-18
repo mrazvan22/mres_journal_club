@@ -183,10 +183,11 @@ Classification of patients was performed using Support-Vector Machine (SVM) whic
 
 \section*{Key results}
 
-The SVM is used to diagnose AD vs controls (cohorts I,II and III) and AD (cohort II) vs FTLD (cohort IV). In all cases, classification accuracy is very high, reaching 96\% in some cases. Classification accuracy is also high for probable mild-AD (89\%), in line with the diagnosis rates of the best clinical centers around the world. Authors have also tried using different datasets for training and testing, and again the observed accuracy is very high (87.5\% and 96.4\%), given the fact that different scanners were used for producing the images. As opposed to other classifiers, a nice feature of SVM is that it allows the localisation of the voxels that were relevant for classification (i.e. the support vectors). For AD vs controls most of these vectors were clustered around the parahyppocampal gyrus and parietal cortex. 
+A linear SVM is used to diagnose AD vs controls (cohorts I,II and III) and AD (cohort II) vs FTLD (cohort IV). In all cases, classification accuracy is very high, reaching 96\% in some cases. Classification accuracy is also high for probable mild-AD (89\%), in line with the diagnosis rates of the best clinical centers around the world. Authors have also tried using different datasets for training and testing, and again the observed accuracy is very high (87.5\% and 96.4\%), given the fact that different scanners were used for producing the images. A nice feature of SVMs is that it allows the localisation of the voxels that were relevant for classification (i.e. the support vectors). Authors show that for AD vs controls, most of these vectors were clustered around the parahyppocampal gyrus and parietal cortex. Authors also tried to use non-linear kernel functions but this failed to improve performance. The results they obtained were equally good or better than other methods used in the field based on MR images. \cite{gosche2002hippocampal,jack2002antemortem,barnes2004differentiating,csernansky2004correlations,wahlund2005evidence} 
 
 \section*{Contributions}
 
+The work of Kl\"{o}ppel et al shows that automated, data-driven techniques are equally good or even better than clinical experts at diagnosing AD patients, as NINCDS-ADRDA or DSM-IIIR criteria have an average sensitivity and specificity of 81\% and 70\% respectively, which are lower than the values reported in the paper. \cite{knopman2001practice} 
 % Seb's comments: 
 % 1. one of the biggest advantages/selling points about the paper that patients were postmortemly identified as AD (which is why it got accepted into Brain)
 % 2. paper is fantastic
@@ -195,14 +196,19 @@ The SVM is used to diagnose AD vs controls (cohorts I,II and III) and AD (cohort
 
 \section*{Limitations}
 
+One methodological limitation is that the SVM is a binary classifier, where only two classes can be distinguished at the same time. Although there exist ways to implement a multiclass-SVM by reducing it to several binary problems \cite{duan2005best} or using directed acyclic graphs (DAGs) \cite{platt1999large}, other multiclass classifiers might provide a more natural solution such as logistic regression \cite{desikan2009automated} or a parzen-window classifier with a linear kernel. \cite{shawe2004kernel} Moreover, the method of Kl\"{o}ppel assumes there is no head motion during the scan and does not correct it. Another limitation is that the diffeomorphic registration technique by Ashburner, 2007 \cite{ashburner2007fast} which is based on sums of squares is very sensitive to affine initialization. \cite{avants2011reproducible}
+
 % limitations: the SVN can only distinguish between two classes. In order to distinguish between more classes a multi-SVN approach needs to be considered
 % motion was not considered (Seb). 
 % 9. The normalisation technique is based on Least Squares, which is very sensitive to initial conditions
 
 \section*{Impact}
 
-% 5. the research field evolved since 2008. Now people look into classifying various varieties of AD up to small granularities
+The work of Kl\"{o}ppel et al is the first to perform automatic classification of MRI scans in pathologically-confirmed AD and to differentiate different forms of dementia. It clearly made a huge impact when it was published in 2008 and got 569 citations so far. Although it is a methodological paper, it managed to get published in a clinical journal like Brain probably due to the unique datasets it analysed which contained pathologically-confirmed AD patients. Since then, the field has evolved and now people look at diagnosing various subtypes of AD or MCI \cite{haller2013individual} or other types of dementias such as schizophrenia. \cite{ardekani2011diffusion} Others like Zhang et al. have applied SVMs to multi-modal data combining structural MR imaging, functional imaging (FDG-PET) and CSF biomarkers to classify AD patients. \cite{zhang2011multimodal}
 
+Later in 2008 the author did a more detailed study of the diagnostic accuracy between the SVM method and radiologists and found SVMs to have similar results to expert radiologists, the advantage of SVMs being that they don't require expert-knowledge and can easily be exchanged between centers. \cite{kloppel2008accuracy} 
+
+% conclusion
 
 \nocite{*} % Show all Bib-entries
 \bibliographystyle{unsrt}
