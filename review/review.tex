@@ -163,17 +163,45 @@ Dementia and associated diseases such as Alzheimer's disease (AD) affect 36 mill
 
 \section*{Introduction}
 
+% SVMs and cohort
 
+This paper uses a machine-learning classifier called \emph{Support Vector Machine} (SVM) for the purpose of AD diagnosis. It is the first study to use SVMs for diagnosing AD using pathologically confirmed cases. The authors futher use SVMs to differentially diagnose AD and frontotemporal lobal degeneration (FTLD). The study uses 4 different cohorts of patients: (1) the first set is a community-based cohort where AD was confirmed with neuropathology (2) the second set consisted of neuropathologically-confirmed AD subjects from a different center than the first group (3) the third set consisted of probable mild-AD patients limited to 80 years of age or younger (4) finally, the fourth set was made of subjects with neuropathologically proven FTLD having comparable Mini Mental State Examination (MMSE) scores with the first two groups. The scans were collected over a period up to 10 years with a total of around 13 different scanners in order to test the ability of SVMs to diagnose patinents using training data from different centers.
+
+% Method, protocol
+
+% Image processing
+Several image processing steps were taken in order to remove artefacts and ultimatelly register the scans. Images were segmented into grey matter, white matter and cerebro-spinal fluid (CSF) using SPM5 \cite{SPM5}. The GM segments were further normalised to the population templates using a diffeomorphic registration algorithm \cite{ashburner2007fast}, which was a sophisticated technique at the time the paper was published. In order to ensure the overall ammount of each tissue class remained constant a separate \emph{'modulation'} step was undertaken as described by Ashburner and Friston \cite{ashburner2000voxel}.
+
+% SVM
+
+Classification of patients was performed using Support-Vector Machine (SVM) which is a method of supervised, binary classification where voxels from MR images are treated as points in a high-dimensional space. Once projected in this higher-dimensional space, it tries to find the optimal separating hyperplane (OSH) that separates the two classes as efficient as possible. The OSH is defined by the voxels that are the closest to the separating boundary, called \emph{support vectors}. \cite{vapnik1998statistical,bishop2006pattern} The OSH, wich is produced during training, can then be used to classify a new patient by finding on which side of the OSH it's corresponding data point lies. 
 
 \section*{Method}
 
+% 6. At the time the paper was using sophisticated algorithms (the normalisation technique, Ashburner 2007)
+
+
 \section*{Key results}
+
+The SVM is used to diagnose AD vs controls (cohorts I,II and III) and AD (cohort II) vs FTLD (cohort IV). In all cases, classification accuracy is very high, reaching 96\% in some cases. Classification accuracy is also high for probable mild-AD (89\%), in line with the diagnosis rates of the best clinical centers around the world. Authors have also tried using different datasets for training and testing, and again the observed accuracy is very high (87.5\% and 96.4\%), given the fact that different scanners were used for producing the images. As opposed to other classifiers, a nice feature of SVM is that it allows the localisation of the voxels that were relevant for classification (i.e. the support vectors). For AD vs controls most of these vectors were clustered around the parahyppocampal gyrus and parietal cortex. 
 
 \section*{Contributions}
 
+% Seb's comments: 
+% 1. one of the biggest advantages/selling points about the paper that patients were postmortemly identified as AD (which is why it got accepted into Brain)
+% 2. paper is fantastic
+% 7. biggest point: the first data-driven approach for this
+% 8. It is remarkable that a methods paper like this got published into Brain(they only take a few methods papers each year)
+
 \section*{Limitations}
 
+% limitations: the SVN can only distinguish between two classes. In order to distinguish between more classes a multi-SVN approach needs to be considered
+% motion was not considered (Seb). 
+% 9. The normalisation technique is based on Least Squares, which is very sensitive to initial conditions
+
 \section*{Impact}
+
+% 5. the research field evolved since 2008. Now people look into classifying various varieties of AD up to small granularities
 
 
 \nocite{*} % Show all Bib-entries
@@ -182,3 +210,19 @@ Dementia and associated diseases such as Alzheimer's disease (AD) affect 36 mill
 
 
 \end{document}
+
+
+% limitations: the SVN can only distinguish between two classes. In order to distinguish between more classes a multi-SVN approach needs to be considered
+% motion was not considered (Seb). 
+
+% Seb's comments: 
+% 1. one of the biggest advantages/selling points about the paper that patients were postmortemly identified as AD (which is why it got accepted into Brain)
+% 2. paper is fantastic
+% 3. title should be "ML classification of abnormal scan" (not 100% sure, but abnomal keyword was there, Seb) 
+% 4. classifying on more classes (other dementias such as schizophrenia) is crucial. If a schizophrenic patient is included in the sample it might be picked up as AD, although it doesn't have AD at all.
+% 5. the research field evolved since 2008. Now people look into classifying various varieties of AD up to small granularities
+% 6. At the time the paper was using sophisticated algorithms (the normalisation technique, Ashburner 2007)
+% 7. biggest point: the first data-driven approach for this
+% 8. It is remarkable that a methods paper like this got published into Brain(they only take a few methods papers each year)
+% 9. The normalisation technique is based on Least Squares, which is very sensitive to initial conditions
+% 10. The modulation step: for having 100% amyloid-beta detection 
