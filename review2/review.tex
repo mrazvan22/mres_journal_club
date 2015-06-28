@@ -2,26 +2,11 @@
 
 \usepackage{amsmath,amssymb,calc,ifthen}
 
-\usepackage{float}
-
 \usepackage[table,usenames,dvipsnames]{xcolor} % for coloured cells in tables
 
-\usepackage{tikz}
-
-
 \usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
-}
 
-% Nice package for plotting graphs
-% See excellent guide:
-% http://www.tug.org/TUGboat/tb31-1/tb97wright-pgfplots.pdf
-\usetikzlibrary{plotmarks}
+
 \usepackage{amsmath,graphicx}
 \usepackage{epstopdf}
 \usepackage{caption}
@@ -29,10 +14,7 @@
 
 % highlight - useful for TODOs and similar
 \usepackage{color}
-\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
 
-\newcommand\ci{\perp\!\!\!\perp} % perpendicular sign
-\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}} % diagonal fraction
 
 \usepackage{listings}
 
@@ -43,72 +25,15 @@
   urlcolor=Blue}
   
 
-
-
 % margin size
 \usepackage[margin=2.5cm]{geometry}
 
-\tikzstyle{state}=[circle,thick,draw=black, align=center, minimum size=2.1cm,
-inner sep=0]
-\tikzstyle{vertex}=[circle,thick,draw=black]
-\tikzstyle{terminal}=[rectangle,thick,draw=black]
-\tikzstyle{edge} = [draw,thick]
-\tikzstyle{lo} = [edge,dotted]
-\tikzstyle{hi} = [edge]
-\tikzstyle{trans} = [edge,->]
 
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
 
-\lstset{ %
-  backgroundcolor=\color{white},   % choose the background color; you must add 
-%\usepackage{color} or \usepackage{xcolor}
-  basicstyle=\footnotesize,        % the size of the fonts that are used for the 
-%code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen 
-%at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
-  deletekeywords={...},            % if you want to delete keywords from the 
-%given language
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 
-%8-bits encodings only, does not work with UTF-8
-  frame=single,                    % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping 
-%indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{blue},       % keyword style
-  language=Octave,                 % the language of the code
-  morekeywords={*,...},            % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible 
-%values are (none, left, right)
-  numbersep=5pt,                   % how far the line-numbers are from the code
-  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed 
-%on line-breaks within not-black text (e.g. comments (green here))
-  showspaces=false,                % show spaces everywhere adding particular 
-%underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular 
-%underscores
-  stepnumber=2,                    % the step between two line-numbers. If it's 
-%1, each line will be numbered
-  stringstyle=\color{mymauve},     % string literal style
-  tabsize=2,                       % sets default tabsize to 2 spaces
-  title=\lstname                   % show the filename of files included with 
-%\lstinputlisting; also try caption instead of title
-}
-
-%\title{EPSRC Centre for Doctoral Training in Medical Imaging\\\hfill\\MRes Project Plan}
-% \title{Differential Diagnosis of Alzheimer subtypes through disease progression modelling}
-% \author{
-% Razvan Valentin Marinescu\\
-% Student Number: 14060166\\
-% \texttt{razvan.marinescu.14@ucl.ac.uk}
-% }
 
 \begin{document}
 \belowdisplayskip=12pt plus 3pt minus 9pt
@@ -123,15 +48,15 @@ inner sep=0]
 \includegraphics[width=0.2\textwidth]{ucl-logo2}~\\[1cm]
 
 
-\textsc{\Large CDT Journal Club - First Written Review}\\[0.5cm]
+\textsc{\Large CDT Journal Club - Second Written Review}\\[0.5cm]
 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 % Title
 \HRule \\[0.4cm]
-{ \Large Automatic classification of MR scans in Alzheimer's disease \\[0.4cm] }
+{ \Large [18F]T807, a novel tau positron emission tomography imaging agent for Alzheimer's disease \\[0.4cm] }
 
-{ \small Stefan Kl\"{o}ppel , Cynthia M. Stonnington , Carlton Chu , Bogdan Draganski , Rachael I. Scahill , Jonathan D. Rohrer , Nick C. Fox , Clifford R. Jack , John Ashburner , Richard S. J. Frackowiak}
+{ \small Chun-Fang Xia, Janna Arteaga, Gang Chen, Umesh Gangadharmath, Luis F. Gomez, Dhanalakshmi Kasi, Chung Lam, Qianwa Liang, Changhui Liu, Vani P. Mocharla, Fanrong Mu, Anjana Sinha, Helen Su, A. Katrin Szardenings, Joseph C. Walsh, Eric Wang, Chul Yu, Wei Zhang, Tieming Zhao, Hartmuth C. Kolb }
 
 \HRule \\[1.5cm]
 
@@ -145,8 +70,8 @@ R\u{a}zvan Valentin \textsc{Marinescu}\\
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
-\emph{Paper chosen by:} \\
-Prof. Sebastien \textsc{Ourselin}\\
+\emph{Paper lead by:} \\
+Prof. Erik \textsc{Arstad}\\
 \end{flushright}
 \end{minipage}
 
@@ -166,33 +91,36 @@ EPSRC Centre for Doctoral Training in Medical Imaging\\ University College Londo
 
 
 
-\section*{Paper background}
+\section*{Aims and motivations}
 
-Dementia and associated diseases such as Alzheimer's disease (AD) affect 36 million people globally\cite{world2012dementia} and account for 486,000 deaths\cite{lozano2013global}. Definitive diagnosis of AD can only be made with histopathological confirmation of amyloid plaques and neurofibrillary tangles at autopsy. Early accurate detection of AD is important because the treatment is most effective if undertaken as early as possible. Medical imaging modalities such as MRI have been used for automatic AD diagnosis by measuring the atrophy rates of cortical volumes\cite{fox2004imaging,barnes2004differentiating,wahlund2005evidence}, but these methods have not yet been introduced in clinical practice.
+Tau-related neurological disorders such as Alzheimer's disease (AD), Frontotemporal lobe degeneration (FTLD), Down's syndrome and Progressive supranuclear palsy (PSP) affect more than 33.9 million people worldwide. \cite{barnes2011projected} Although many amyloid-beta (A$\beta$) tracers have been developed such as Pittsburgh compound B (PiB) \cite{klunk2004imaging}, only a few tracers have been reported previously for the Tau protein, such as 18F-FDDNP\cite{barrio1999pet}, 11C-lansoprazole\cite{rojo2010selective}, 18F-THK523\cite{fodero201118f}. These had several limitations: 18F-FDDNP showed limited binding to both NFTs and A$\beta$ plaques in vitro \cite{thompson2009interaction}, 11C-lansoprazole was initially unable to cross the brain-blood barrier \cite{shao2012evaluation} while 3H-THK523 was shown to bind to neurofibrillary tangles (NFTs) as well as to A$\beta$ plaques in human AD brains \cite{zeng20128invitro}. The aim of the paper was to design and develop a novel positron emission tomography (PET) imaging agent targeting paired-helical filament (PHF) tau in human AD brains that would overcome the limitations of previous compounds.
 
 \section*{Methods}
 
-This paper uses a machine-learning classifier called \emph{Support Vector Machine} (SVM) for the purpose of AD diagnosis.\cite{kloppel2008automatic} It is the first study to use SVMs for diagnosing AD using pathologically confirmed cases. The authors further use SVMs to differentially diagnose AD and frontotemporal lobal degeneration (FTLD). The study uses 4 different cohorts of patients: (I and II) the first two sets consisted of neuropathologically-confirmed AD subjects, (III) the third group consisted of probable mild-AD patients limited to 80 years of age or younger and (IV) the fourth set was made of subjects with neuropathologically proven FTLD having comparable Mini Mental State Examination (MMSE) scores with the first two groups.
+The authors designed a novel class of 5H-pyrido-indoles and examined their binding affinity towards PHF tau and selectivity over A$\beta$. A total of 45 AD and non-AD human brains were used and immunohistochemically (IHC) stained for determining PHF-tau and A$\beta$ load. After a qualitative screening of several hundred compunds, T807 emerged as the lead candidate. Aster several preparation steps, T807 was labelled with 18F radioisotope by heating the mixture of the two compounds to 130 $^{\circ}$C so that the -NO$_2$ group would be substituted by 18F fluoride. In order to determine the lipophilicity of the new tracer, the logP was determined by analysing it in a gamma counter. 
 
-Several image processing steps were taken in order to remove artefacts and ultimately register the scans. After visual inspection for structural abnormalities, images were segmented into grey matter (GM), white matter (WM) and cerebro-spinal fluid (CSF) using SPM5\cite{SPM5}. The GM segments were further normalised to the population templates using a \emph{diffeomorphic registration algorithm}\cite{ashburner2007fast}, which was a sophisticated technique at the time the paper was published. 
+The 18F-T807 tracer was further analysed with regards to how well it binded to PHF-tau and A$\beta$, brain uptake and biostability. Selectivity for PHF tau over A$\beta$ was measured using autoradiography on the 26 AD and non-AD human brains. The dissociation constant Kd was determined by Scatchard plot analysis. Brain uptake, biodistribution, excretion and biostability of 18F-T807 were analysed in mice using PET scanning, gamma counter analysis of organ samples and high performance liquid chromatography (HPLC).
 
-Classification of patients was performed using Support-Vector Machine (SVM) which is a method of supervised, binary classification where voxels from MR images are treated as points in a high-dimensional space.\cite{vapnik1998statistical,bishop2006pattern} Once projected in this higher-dimensional space, the SVM tries to find the \emph{optimal separating hyperplane} (OSH) that separates the two classes as efficient as possible. The OSH is defined by the voxels that are the closest to the separating boundary, called \emph{support vectors}. The OSH can then be used to classify a new patient by finding on which side of the OSH it's corresponding data point lies. 
 
 \section*{Key results}
 
-Kl\"{o}ppel et al.\cite{kloppel2008automatic} show that the linear SVM is able to diagnose AD vs controls and AD vs FTLD with a high accuracy (95\%, 92.9\% and 81.1\% for cohorts I, II and III). If using the antero-medial lobe volume ROI, accuracy improves only for mild-AD (88.9\%). Authors have also tried to use different datasets for training and testing, and again the observed accuracy is high (87.5\% and 96.4\%), suggesting that the method is robust and can be generalised across multiple scanners. 
+The main result of the paper was that 18F-T807 labeling colocalised with PHF-tau-stained human brain sections in autoradiography images. Furthermore, the new tracer didn't colocalise with A$\beta$ plaques, suggesting the that 18F-T807 binds selectively to tau proteins and not to A$\beta$. These results were further confirmed by showing that 18F-T807 autoradiography signals correlate with PHF-tau loading and not with A$\beta$ loading. 
 
-A nice feature of the SVM is that it allows the localisation of the voxels that were relevant for classification (i.e. the support vectors). Authors show that for AD vs controls, most of these vectors were clustered around the parahippocampal gyrus and parietal cortex. Overall, the results they obtained were equally good or better than other methods used in the field based on MR images.\cite{gosche2002hippocampal,jack2002antemortem,barnes2004differentiating,csernansky2004correlations,wahlund2005evidence} The work of Kl\"{o}ppel et al.\cite{kloppel2008automatic} shows that automated, data-driven techniques are equally good or even better than clinical experts at diagnosing AD patients, because NINCDS-ADRDA or DSM-IIIR criteria have an average sensitivity and specificity of 81\% and 70\% respectively\cite{knopman2001practice}, which are lower than the values reported in the paper. 
+The tracer also displayed rapid brain penetration and fast washout in mice studies. Kidney elimiation was shown to be a significant clearance pathway, while activity in the bone and muscle remained relatively low.
+
+
+% Don't mention about Kd, as they couldn't compare it to other values in the literature and that doesn't constitute a key result
+
+\section*{Contributions}
+
 
 \section*{Limitations}
 
-One methodological limitation is that the SVM is a binary classifier, where only two classes can be distinguished at the same time. This makes it unsuitable for diagnosing multiple types of dementia at the same time. In order to overcome this, one can implement a multiclass-SVM, which reduces the original problem to several binary problems\cite{duan2005best} or use directed acyclic graphs\cite{platt1999large}. Moreover, the method of Kl\"{o}ppel\cite{kloppel2008automatic} assumes there is no head motion during the scan and does not correct it, so future studies can incorporate a motion-correction algorithm. Another limitation is that the diffeomorphic registration technique by Ashburner, 2007\cite{ashburner2007fast} which is based on sums of squares, is very sensitive to affine initialisation.\cite{avants2011reproducible} One factor that limits the applicability of the method to clinical practice is that a user is required to check for registration errors. This can be overcome by alerting the user only when a certain errror threshold is reached.
+% Did not test in other tauopaties
+
 
 \section*{Impact and conclusion}
 
-The work of Kl\"{o}ppel et al.\cite{kloppel2008automatic} is the first to perform automatic classification of MRI scans in pathologically-confirmed AD and to differentiate different forms of dementia. It clearly made a huge impact when it was published in 2008 and so far got 569 citations. Although it is a methodological paper, it managed to get published in a clinical journal like Brain probably due to the unique datasets it analysed that contained pathologically-confirmed AD patients. Since it was published, the field has evolved and now people look at diagnosing various subtypes of AD or MCI\cite{haller2013individual} or other types of dementia such as schizophrenia\cite{ardekani2011diffusion}, Parkinson syndrome\cite{focke2011individual} or multiple systems atrophy.\cite{focke2011individual} Others like Zhang et al.\cite{zhang2011multimodal} have applied SVMs to multi-modal data combining structural MR imaging, functional imaging (FDG-PET) and CSF biomarkers to classify AD patients. Later in 2008, Kl\"{o}ppel et al.\cite{kloppel2008accuracy} did a more detailed study comparing the diagnostic accuracy between the SVM method and radiologists and found SVMs to have similar results to expert radiologists, the advantage of SVMs being that they don't require expert-knowledge.
-
-In conclusion, this study was fundamental in the field of computer-aided diagnosis of neurological disorders showing that SVMs can successfully diagnose AD from healthy ageing subjects. Several modifications are needed in order to make it applicable in a clinical environment such as shorter computation time or making the segmentation fully automated. Nevertheless, it highlights the increasingly important role that computer-aided diagnosis of dementia will have in the near future.
 
 
 \nocite{*} % Show all Bib-entries
@@ -202,18 +130,3 @@ In conclusion, this study was fundamental in the field of computer-aided diagnos
 
 \end{document}
 
-
-% limitations: the SVN can only distinguish between two classes. In order to distinguish between more classes a multi-SVN approach needs to be considered
-% motion was not considered (Seb). 
-
-% Seb's comments: 
-% 1. one of the biggest advantages/selling points about the paper that patients were postmortemly identified as AD (which is why it got accepted into Brain)
-% 2. paper is fantastic
-% 3. title should be "ML classification of abnormal scan" (not 100% sure, but abnomal keyword was there, Seb) 
-% 4. classifying on more classes (other dementias such as schizophrenia) is crucial. If a schizophrenic patient is included in the sample it might be picked up as AD, although it doesn't have AD at all.
-% 5. the research field evolved since 2008. Now people look into classifying various varieties of AD up to small granularities
-% 6. At the time the paper was using sophisticated algorithms (the normalisation technique, Ashburner 2007)
-% 7. biggest point: the first data-driven approach for this
-% 8. It is remarkable that a methods paper like this got published into Brain(they only take a few methods papers each year)
-% 9. The normalisation technique is based on Least Squares, which is very sensitive to initial conditions
-% 10. The modulation step: for having 100% amyloid-beta detection 
